@@ -1,0 +1,12 @@
+{
+  "name": "learnuel-cloud",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["cloud", "api", "file upload"],
+  "author": "Learnuel Technologies",
+  "license": "ISC",
+  "description": "This is the cloud functions for Learnuel Application",
+}
