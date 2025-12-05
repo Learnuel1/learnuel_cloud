@@ -1,0 +1,3 @@
+exports.CONFIG = {
+  APP_NAME: "LEARNUEL CLOUD",
+};
