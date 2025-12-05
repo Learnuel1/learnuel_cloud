@@ -1,0 +1,17 @@
+Account 
+    - _id           -> ObjectId
+    - firstName     -> String
+    - lastName      -> String
+    - email         -> String
+    - phone         -> String
+    - AccountType   -> enum ["Free", "Starter", "Premium"]
+    - createdAt     -> Date
+    - updatedAt     -> Date
+
+Storage
+    - _id           -> ObjectId
+    - account       -> Account(ObjectId)
+    - space         -> Number  // 20mb free plan (default)
+    - usedSpace     -> Number
+    - createdAt     -> Date
+    - updatedAt     -> Date
