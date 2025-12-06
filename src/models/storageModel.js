@@ -1,11 +1,12 @@
-const mongoose = require("mongoose");
+import {Schema, model} from "mongoose" ;
 
 const StorageSchema = new Schema(
   {
     account: {
-      type: mongoose.Schema.Types.ObjectId,
+      type:  Schema.Types.ObjectId,
       ref: "Account",
       required: true,
+      index: true
     },
 
     space: {
@@ -23,4 +24,5 @@ const StorageSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model("Storage", StorageSchema);
+const StorageModel  =  model("Storage", StorageSchema);
+export default StorageModel;
