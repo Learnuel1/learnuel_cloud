@@ -1,4 +1,4 @@
-const {Schema, model} = require("mongoose");
+import {Schema, model } from "mongoose";
 
 const accountSchema = new Schema( {
     firstName: {
@@ -29,7 +29,11 @@ const accountSchema = new Schema( {
         required: true,
         minLength: 8,
     },
-    refreshTokens: [String]
+    refreshToken: {
+        type: [String],
+        default: []
+    },
 }, {timestamps: true});
 
-module.exports =  model("Account", accountSchema);
+const AccountModel =  model("Account", accountSchema);
+export default  AccountModel;
