@@ -26,3 +26,28 @@ exports.findByEmail = async (email) => {
         return {error:error.message};
     }
 }
+exports.saveRefreshToken = async (accountId, refreshToken) => {
+    try { 
+        return AccountModel.findByIdAndUpdate(
+        accountId,
+            {$set: {refreshToken: refreshToken}}
+        )
+    } catch (error) {
+        return {error: error.message}
+    }
+}
+
+exports.findByRefreshToken = async (refreshToken) => {
+    try {
+        return AccountModel.findOne({refreshToken:refreshToken})
+    } catch (error) {
+        
+    }
+}
+exports.findByAccountId = async (AccountId ) => {
+    try {
+        return AccountModel.findOne({AccountId })
+    } catch (error) {
+        return{ error : error.message}
+    }
+}
